@@ -1,3 +1,4 @@
+<img width="1122" height="688" alt="Screenshot 2026-07-11 at 02 05 20" src="https://github.com/user-attachments/assets/ca7ee93d-2f0f-4121-a412-f7c0ab72dd7f" />
 # 🌸 Bloomie
 
 A focus, planning, and wellness dashboard with a cherry blossom aesthetic — combining a to-do list, Pomodoro-style focus timer, mood tracker, and personal diary in one calm daily workspace.
