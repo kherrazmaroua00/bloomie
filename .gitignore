@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables
+.env
+.env.local
+*/.env
+
+# Next.js
+.next/
+*/.next/
+out/
+
+# Prisma
+*/prisma/migrations/dev.db
+
+# Build artifacts
+dist/
+build/
+
+# OS/editor files
+.DS_Store
+*.log
+.vscode/

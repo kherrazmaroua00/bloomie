@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  fullName  String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+
+  tasks     Task[]
+  moods     Mood[]
+  diaries   DiaryEntry[]
+  focusSessions FocusSession[]
+}
+
+model Task {
+  id        String   @id @default(cuid())
+  title     String
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+}
+
+model Mood {
+  id        String   @id @default(cuid())
+  mood      String   // "great" | "good" | "okay" | "tired" | "stressed"
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+}
+
+model DiaryEntry {
+  id        String   @id @default(cuid())
+  content   String
+  mood      String?
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+}
+model FocusSession {
+  id          String   @id @default(cuid())
+  duration    Int      // minutes actually completed, e.g. 25
+  completedAt DateTime @default(now())
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+}
