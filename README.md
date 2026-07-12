@@ -1,3 +1,4 @@
+
 # 🌸 Bloomie
 
 A focus, planning, and wellness dashboard with a cherry blossom aesthetic — combining a to-do list, Pomodoro-style focus timer, mood tracker, and personal diary in one calm daily workspace.
@@ -58,8 +59,14 @@ The frontend proxies `/api/*` requests to the backend automatically (see `next.c
 - [ ] Weekly/monthly mood and focus history charts
 
 ## 📸 Screenshots
+**Sign Up / Login**
 
-*(add a few screenshots here — dashboard, login, diary — makes a huge difference for anyone browsing your repo)*
+<img width="1091" height="676" alt="Screenshot 2026-07-11 at 02 11 28" src="https://github.com/user-attachments/assets/7359af2c-78b1-4c88-851a-37b2caf8b6dd" />
+
+**Dashboard** — To Do List, Focus Timer, Mood Tracker, and Diary in one view
+
+<img width="1122" height="688" alt="Bloomie dashboard" src="https://github.com/user-attachments/assets/ca7ee93d-2f0f-4121-a412-f7c0ab72dd7f" />
+
 
 ## 📄 License
 
