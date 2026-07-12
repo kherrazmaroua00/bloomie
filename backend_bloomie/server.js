@@ -8,23 +8,20 @@ const taskRoutes = require("./routes/tasks");
 const moodRoutes = require("./routes/moods");
 const diaryRoutes = require("./routes/diary");
 const focusSessionRoutes = require("./routes/focusSessions");
+const quoteRoutes = require("./routes/quote");   // ← add this
 
 const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL,
-    credentials: true,
-  })
-);
+app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/moods", moodRoutes);
 app.use("/api/diary", diaryRoutes);
 app.use("/api/focus-sessions", focusSessionRoutes);
+app.use("/api/quote", quoteRoutes);   // ← add this
 
 app.get("/", (req, res) => {
   res.send("Bloomie backend is running ✅");
